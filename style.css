@@ -147,6 +147,15 @@ a {
   margin-top: 6px;
 }
 
+.hero-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6b7c93;
+  margin-bottom: 10px;
+}
+
 .hero-clean {
   align-items: center;
   padding: 60px 0 40px;
@@ -400,9 +409,9 @@ a {
   letter-spacing: -0.02em;
 }
 
-.about-section .section-head p {
+/* .about-section .section-head p {
   max-width: 70ch;
-}
+} */
 
 /* Left blocks */
 .about-block {
