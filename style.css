@@ -559,8 +559,19 @@ a {
   gap: 10px
 }
 
-.thumb {
+/* .thumb {
   height: 260px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: linear-gradient(135deg, rgba(37, 99, 235, .16), rgba(14, 165, 233, .12));
+} */
+
+.thumb {
+  /* width: 100%; */
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
   border-radius: 16px;
   border: 1px solid var(--border);
   background: linear-gradient(135deg, rgba(37, 99, 235, .16), rgba(14, 165, 233, .12));
