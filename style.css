@@ -30,7 +30,7 @@ body {
 
 .container {
 
-  margin: 0 10%;
+  margin: 0 5%;
   padding: 22px 18px
 }
 
@@ -135,6 +135,7 @@ a {
   border-radius: 16px;
   padding: 14px;
   box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+  width: 250px;
 }
 
 .proof-kpi {
@@ -568,7 +569,7 @@ a {
 
 .thumb {
   /* width: 100%; */
-  height: 260px;
+  height: 200px;
   display: block;
   object-fit: cover;
   object-position: center;
@@ -608,7 +609,7 @@ a {
 }
 
 .pill {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--border);
@@ -619,7 +620,7 @@ a {
 
 .card h3 {
   margin: 6px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: -0.01em
 }
 
@@ -627,18 +628,18 @@ a {
   margin: 8px 0 0;
   color: var(--muted);
   line-height: 1.65;
-  font-size: 14px
+  font-size: 12px
 }
 
 .tag-row {
   display: flex;
-  gap: 8px;
+  gap: 5px;
   flex-wrap: wrap;
   margin-top: 12px
 }
 
 .tag-row span {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   border: 1px solid var(--border);
   padding: 6px 10px;
@@ -651,6 +652,10 @@ a {
   margin-top: 12px
 }
 
+.card-actions a {
+  font-size: 12.5px;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -661,6 +666,7 @@ a {
 .project-desc{
 margin-top:8px;
 font-weight:500;
+font-size: 12px;
 }
 
 .project-approach{
