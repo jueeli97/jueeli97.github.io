@@ -126,7 +126,7 @@ a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
-  margin-top: 18px;
+  margin-top: 15px;
 }
 
 .proof-card {
@@ -164,9 +164,10 @@ a {
 
 .hero-clean .headline {
   /* max-width: 20ch; */
-  font-size: 52px;
+  font-size: 48px;
   line-height: 1.05;
   color: #4467a5;
+  margin-top: 0;
 }
 
 .hero-clean .sub-headline {
@@ -174,6 +175,7 @@ a {
   line-height: 1;
   font-weight: 500;
   color: #1c427b94;
+  margin-top: 0;
 }
 
 .hero-clean .subhead {
@@ -254,7 +256,7 @@ a {
   gap: 10px;
   align-items: center;
   color: var(--muted);
-  margin-top: 8px
+  margin-top: 10px;
 }
 
 .section {
@@ -271,7 +273,7 @@ a {
 .section-head p {
   margin: 8px 0 0;
   color: var(--muted);
-  line-height: 1.6
+  /* line-height: 1.6 */
 }
 
 .about-grid {
@@ -292,6 +294,7 @@ a {
 .about-block p {
   color: var(--muted);
   line-height: 1.7;
+  font-size: 14px;
 }
 
 .about-block ul {
@@ -392,10 +395,9 @@ a {
 
 /* Make header feel like hero */
 .about-section .section-head h2 {
-  font-size: 36px;
+  font-size: 28px;
   letter-spacing: -0.02em;
 }
-
 
 /* Left blocks */
 .about-block {
@@ -412,6 +414,7 @@ a {
   align-items: center;
   gap: 10px;
   margin: 0 0 10px;
+  font-size: 16px;
 }
 
 .about-block h3::before {
@@ -436,6 +439,7 @@ a {
   align-items: flex-start;
   margin: 10px 0;
   color: var(--muted);
+  font-size: 14px;
 }
 
 .about-block ul li::before {
@@ -1179,6 +1183,7 @@ a {
 
   .about-block p {
     text-align: justify;
+    font-size: 14px;
   }
 
 }
