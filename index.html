@@ -49,7 +49,7 @@
     <div class="hero-copy">
       <div class="eyebrow">Data Analyst &middot; Data Scientist &middot; BI Analyst</div>
       <h1><span class="script">Hi, I'm</span>Jueeli Sawant</h1>
-      <p>I build analytics solutions that turn raw data into forecasts, models, and dashboards — piece by piece, the way good analysis actually comes together.</p>
+      <p>I work with messy data and try to turn it into something a team can actually use. Some days that's a SQL pipeline or a dashboard, other days it's a machine learning model or an AI-powered tool, but the real job is figuring out what the business actually needs from it.</p>
       <div class="cta-row">
         <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-solid">Resume</a>
         <a href="#connect" class="btn btn-outline">Get in Touch</a>
@@ -188,7 +188,7 @@
   <div class="section-inner">
     <div class="section-heading reveal">
       <span class="section-eyebrow">03 — Experience</span>
-      <h2>Where the pieces came from</h2>
+      <h2>The experience behind every piece</h2>
     </div>
 
     <div class="quest-path">
@@ -208,16 +208,16 @@
 
         <div class="quest-card" style="--node-color: var(--rose);">
           <div class="card-top">
-            <h3>Data Scientist, Volunteer</h3>
+            <h3>Data Scientist</h3>
             <span class="date-pill">Aug 2026 – Present</span>
           </div>
           <div class="sub">Greenstand — Grower Impact &amp; Data Quality Dashboard, Treetracker Admin Panel</div>
 
           <ul class="bullets">
-            <li>Started by profiling grower activity and tree-capture data on Treetracker — capture volume, active growers, species and regional spread — to get a real baseline before touching anything else.</li>
-            <li>Built rule-based checks using grower ID, GPS proximity, and timestamp windows to catch duplicate and invalid capture records, since a bad record looks identical to a good one until you know what to check for.</li>
-            <li>Moved into the modeling side in Phase 3, training an Isolation Forest to flag anomalous and duplicate records automatically instead of relying on manually tuned rules.</li>
-            <li>The data-quality issues I'm catching here are the kind that quietly distort impact numbers reported to donors and partners — getting this right matters beyond the dashboard.</li>
+            <li>Profiled grower activity and tree-capture data on Treetracker using SQL and Python, establishing baseline metrics for capture volume, active growers, and regional distribution.</li>
+            <li>Built rule-based validation logic using grower ID, GPS proximity, and timestamp windows to catch duplicate and invalid capture records.</li>
+            <li>Trained an Isolation Forest model to automatically flag anomalous and duplicate records, replacing manual rule tuning with a repeatable detection process.</li>
+            <li>Identified data-quality gaps that directly affect impact metrics reported to donors and partners, prioritizing fixes by measurable effect on reporting accuracy.</li>
           </ul>
 
           <div class="badge-row">
@@ -248,9 +248,9 @@
           <div class="sub">Rochester Institute of Technology, Rochester, NY — GPA 3.8</div>
 
           <ul class="bullets">
-            <li>Coursework covered the full stack — database design, data warehousing, non-relational data management, text mining — but most of what actually stuck came from applying it to messy, real datasets in e-commerce, healthcare, and energy.</li>
-            <li>Built and compared forecasting models against MAE and MAPE instead of just picking whichever one looked best on the training set.</li>
-            <li>Turned model output into dashboards people outside the class could actually read — that gap between "the model works" and "someone can use this" is where I spent most of my time.</li>
+            <li>Completed coursework spanning database design, data warehousing, non-relational data management, and text mining, applying these methods to projects on electricity demand forecasting, fraudulent job posting detection, and corruption analysis.</li>
+            <li>Built and evaluated forecasting models against MAE and MAPE benchmarks rather than defaulting to a single technique.</li>
+            <li>Delivered dashboards that translated model output into a form non-technical stakeholders could act on directly.</li>
           </ul>
 
           <div class="badge-row">
@@ -284,10 +284,10 @@
           <div class="sub">TCS Limited, India — Data Analysis &amp; Analytics-Driven Web &amp; Chatbot Systems</div>
 
           <ul class="bullets">
-            <li>Dug into HR onboarding and helpdesk data to find what was actually blocking engagement — findings that fed into product changes behind a 20% jump in user satisfaction and 25% growth in mobile adoption.</li>
-            <li>Traced chatbot response-time bottlenecks back to their source and worked with engineering to cut response time by a fifth.</li>
-            <li>Ran NLP-based sentiment analysis on chatbot feedback using Azure Cognitive Services to surface real user pain points, which fed into changes that lifted engagement by 15%.</li>
-            <li>Caught inconsistencies across reporting dashboards before they reached leadership, so the KPI numbers people were making decisions on were actually right.</li>
+            <li>Analyzed HR onboarding and helpdesk data to identify engagement blockers, informing product changes that drove a 20% increase in user satisfaction and 25% growth in mobile adoption.</li>
+            <li>Diagnosed chatbot response-time bottlenecks and partnered with engineering to reduce response time by 20%.</li>
+            <li>Applied NLP-based sentiment analysis using Azure Cognitive Services to chatbot feedback, surfacing user pain points that informed changes lifting engagement by 15%.</li>
+            <li>Audited reporting dashboards for inconsistencies, ensuring leadership had accurate data to base decisions on.</li>
           </ul>
 
           <div class="badge-row">
@@ -350,7 +350,11 @@
             <div class="proj-icon-crest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18l5-8 4 5 4-9 3 12" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <h3>InsightPulse — AI Customer Intelligence Platform</h3>
-          <p>Raw e-commerce CSVs in, a working dashboard out — no pre-cleaned sample data required. Under the hood it's four ML models training live on whatever you upload (churn, segmentation, LTV, anomaly detection), plus a Gemini copilot that explains the numbers instead of just showing them.</p>
+          <div class="proj-breakdown">
+            <p><strong>Problem:</strong> Small e-commerce sellers have raw transaction data but no easy way to turn it into decisions — most analytics tools assume clean, pre-formatted input they don't have.</p>
+            <p><strong>Approach:</strong> Built an ETL pipeline that normalizes 30+ real-world column variations, then trained four ML models (churn, segmentation, LTV, anomaly detection) live on whatever gets uploaded, with a Gemini copilot translating outputs into plain English.</p>
+            <p><strong>Unique approach:</strong> Trained all four models fresh on every upload instead of relying on pre-trained weights, so results reflect the actual dataset a user uploads, not a generic baseline.</p>
+          </div>
           <div class="proj-metric-row">
             <div class="proj-metric"><span class="proj-val" data-count="4">0</span><span class="proj-lbl">live ML models</span></div>
             <div class="proj-metric"><span class="proj-val" data-count="33" data-suffix="K+">0K+</span><span class="proj-lbl">rows processed</span></div>
@@ -375,7 +379,11 @@
             <div class="proj-icon-crest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L4 14h6l-1 8 9-12h-6l1-8z" stroke-linejoin="round"/></svg></div>
           </div>
           <h3>Electricity Demand Forecasting — NY State</h3>
-          <p>Real NYISO grid load data joined against NOAA weather data, not a toy dataset — then four models (SARIMA, Prophet, LSTM, XGBoost) went head-to-head on MAE, RMSE, and MAPE. XGBoost won by a wide margin, cutting error down from an 11% SARIMA baseline to 2.06%.</p>
+          <div class="proj-breakdown">
+            <p><strong>Problem:</strong> NY utility planners need reliable multi-day demand forecasts, but electricity demand swings heavily with weather in ways simple time-series models don't capture.</p>
+            <p><strong>Approach:</strong> Joined NYISO load data with NOAA weather data, engineered 15+ temporal and weather features, and benchmarked four models before landing on XGBoost at 2.06% MAPE.</p>
+            <p><strong>Unique approach:</strong> Benchmarked four modeling techniques (SARIMA, Prophet, LSTM, XGBoost) head-to-head instead of committing to one upfront, letting the data decide which approach actually fit the demand patterns.</p>
+          </div>
           <div class="proj-metric-row"><div class="proj-metric"><span class="proj-val" data-count="2.06" data-suffix="%">0%</span><span class="proj-lbl">MAPE (XGBoost)</span></div></div>
           <div class="proj-card-footer">
             <div class="proj-stack-tags"><span class="tag">XGBoost</span><span class="tag">LSTM</span><span class="tag">Power BI</span></div>
@@ -392,7 +400,11 @@
             <div class="proj-icon-crest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l2-6 4 12 2-8 2 2h4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
           </div>
           <h3>Hospital Readmission Analytics</h3>
-          <p>100K+ patient records, one real clinical question: who's likely to be readmitted within 30 days? Built a logistic regression model evaluated on ROC/AUC, then wrapped it in an R Shiny dashboard clinicians could explore themselves instead of waiting on a static report.</p>
+          <div class="proj-breakdown">
+            <p><strong>Problem:</strong> Preventable 30-day readmissions hurt patient outcomes and hospital costs, but flagging at-risk patients before discharge takes more than intuition.</p>
+            <p><strong>Approach:</strong> Analyzed 100K+ patient records, built a logistic regression model evaluated on ROC/AUC, and deployed it through an R Shiny dashboard clinicians could use directly.</p>
+            <p><strong>Unique approach:</strong> Chose logistic regression deliberately over a black-box model so clinicians could see exactly which factors drove each patient's risk score, not just a number.</p>
+          </div>
           <div class="proj-metric-row"><div class="proj-metric"><span class="proj-val" data-count="100" data-suffix="K+">0K+</span><span class="proj-lbl">encounters analyzed</span></div></div>
           <div class="proj-card-footer">
             <div class="proj-stack-tags"><span class="tag">R Shiny</span><span class="tag">Logistic Reg.</span></div>
@@ -409,7 +421,11 @@
             <div class="proj-icon-crest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 4h3l2 12h11l2-8H7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor" stroke="none"/><circle cx="17" cy="20" r="1.4" fill="currentColor" stroke="none"/></svg></div>
           </div>
           <h3>E-commerce &amp; Marketing Analytics Dashboard</h3>
-          <p>Nine relational tables joined into one clean dataset, then a Power BI and DAX layer on top surfacing Revenue, AOV, CAC, and ROAS by channel. The funnel analysis is what mattered most — it pointed straight at where acquisition spend was underperforming and which channels actually deserved more budget.</p>
+          <div class="proj-breakdown">
+            <p><strong>Problem:</strong> Marketing had 9 disconnected tables and no single view of channel performance, making budget decisions a guessing game.</p>
+            <p><strong>Approach:</strong> Joined the tables in SQL, built a Power BI/DAX dashboard tracking Revenue, AOV, CAC, and ROAS, and ran a funnel analysis to find where spend was underperforming.</p>
+            <p><strong>Unique approach:</strong> Went beyond a standard KPI dashboard to trace the full conversion funnel stage-by-stage, which is what actually revealed where acquisition spend was underperforming.</p>
+          </div>
           <div class="proj-metric-row"><div class="proj-metric"><span class="proj-val" data-count="9">0</span><span class="proj-lbl">tables unified</span></div></div>
           <div class="proj-card-footer">
             <div class="proj-stack-tags"><span class="tag">SQL</span><span class="tag">DAX</span></div>
@@ -426,7 +442,11 @@
             <div class="proj-icon-crest"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H9l-4 4V5z" stroke-linejoin="round"/></svg></div>
           </div>
           <h3>HerRestartAI — Financial Planning Assistant</h3>
-          <p>Built in a 24-hour hackathon: the Gemini API generates a personalized budgeting and debt-recovery plan grounded in real U.S. cost-of-living data, parsed straight into dashboard-ready numbers — then ElevenLabs reads the plan back out loud for anyone who'd rather hear it than read it.</p>
+          <div class="proj-breakdown">
+            <p><strong>Problem:</strong> People under financial stress often can't access personalized guidance without paying for an advisor.</p>
+            <p><strong>Approach:</strong> Built a Gemini-powered planner in a 24-hour hackathon that generates budgeting and debt-recovery plans grounded in real cost-of-living data, with ElevenLabs voice output for accessibility.</p>
+            <p><strong>Unique approach:</strong> Grounded every generated plan in real cost-of-living data instead of letting the model improvise generic advice, even under a 24-hour build constraint.</p>
+          </div>
           <div class="proj-card-footer" style="margin-top:auto;">
             <div class="proj-stack-tags"><span class="tag">FastAPI</span><span class="tag">Gemini API</span></div>
             <a href="https://github.com/jueeli97" target="_blank" rel="noopener" class="proj-go-link">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
@@ -457,7 +477,7 @@
   <div class="section-inner">
     <div class="section-heading reveal">
       <span class="section-eyebrow">05 — Skills</span>
-      <h2>The full tray of tools</h2>
+      <h2>The skills behind the pieces</h2>
     </div>
 
     <div class="skill-piece-board">
@@ -616,7 +636,7 @@
   <div class="connect-inner reveal">
     <span class="section-eyebrow light">06 — Connect</span>
     <h2>Let's complete the picture</h2>
-    <p>Open to Data Analyst, Data Scientist, and ML roles in the U.S. — happy to talk through any project on this page in more depth.</p>
+    <p>Looking for Data Analyst, BI Analyst, Data Scientist, or ML roles in the U.S. right now. If anything on this page caught your eye, I'd genuinely like to talk about it.</p>
     <div class="connect-links">
       <a href="mailto:jueeli97@gmail.com" class="btn btn-solid-light">Email Me</a>
       <a href="https://www.linkedin.com/in/jueeli-sawant" target="_blank" class="btn btn-outline-light">LinkedIn</a>

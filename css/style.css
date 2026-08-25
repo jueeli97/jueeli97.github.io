@@ -90,9 +90,14 @@ img { max-width: 100%; display: block; }
 /* ============ SHARED ============ */
 .section-inner { max-width: 1180px; margin: 0 auto; padding: 120px 32px; }
 .section-heading { margin-bottom: 56px; }
+
+@media (max-width: 700px) {
+  .section-inner { padding: 70px 22px; }
+  .section-heading { margin-bottom: 30px; }
+}
 .section-eyebrow {
   position: relative;
-  display: block; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
+  display: inline-block; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;
   color: var(--muted); font-weight: 700; margin-bottom: 28px;
 }
 .section-eyebrow::after {
@@ -401,7 +406,7 @@ img { max-width: 100%; display: block; }
   .about-grid { grid-template-columns: repeat(2, 1fr); }
   .about-headline { grid-column: span 2; grid-row: span 1; border-radius: 22px 22px 4px 4px; }
   .about-motto { grid-column: span 2; grid-row: span 1; border-radius: 4px; }
-  .about-strength-row { grid-column: span 2; grid-template-columns: repeat(2, 1fr); gap: 20px 34px; row-gap: 40px; }
+  .about-strength-row { grid-column: span 2; grid-template-columns: 1fr; gap: 20px; }
   .about-connector { display: none; }
   .about-impact { grid-column: span 2; grid-template-columns: repeat(2, 1fr); }
   .about-impact-cell:nth-child(2) { border-right: none; }
@@ -659,6 +664,11 @@ img { max-width: 100%; display: block; }
 .proj-card-tall h3 { font-size: 18px; }
 .proj-card-mid h3 { font-size: 17px; }
 .proj-card p { font-size: 13.4px; line-height: 1.62; color: var(--muted); margin-bottom: 16px; }
+
+.proj-breakdown { margin-bottom: 14px; }
+.proj-breakdown p { font-size: 12.8px; line-height: 1.55; color: var(--muted); margin-bottom: 7px; }
+.proj-breakdown p:last-child { margin-bottom: 0; }
+.proj-breakdown strong { color: var(--ink); font-weight: 700; }
 
 .proj-metric-row { display: flex; gap: 24px; margin-bottom: 18px; flex-wrap: wrap; }
 .proj-metric .proj-val { font-family: 'Fraunces', serif; font-weight: 600; font-size: 24px; display: block; color: var(--ink); }
