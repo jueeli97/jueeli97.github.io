@@ -194,8 +194,52 @@ requestAnimationFrame(() => startAssemblySequence(1500));
 
 photoFrame.addEventListener('click', () => startAssemblySequence(700));
 
+// Once the user has genuinely scrolled the hero out of view, remember that
+// permanently — a later layout reflow (e.g. rotating a phone, which can
+// drastically resize the page) might coincidentally reposition the scroll
+// offset back near the hero's pixel range, but that doesn't mean the user
+// wants to see the intro animation replay over whatever they're reading now.
+let hasScrolledPastHero = false;
+window.addEventListener('scroll', () => {
+  if (hasScrolledPastHero) return;
+  // Use the hero's top edge, not its bottom — waiting for the entire
+  // hero height to clear the viewport is too strict on tall screens,
+  // where a user can already be well into reading the About section
+  // while the last sliver of the hero is technically still in range.
+  if (heroSection.getBoundingClientRect().top < -200) {
+    hasScrolledPastHero = true;
+    // If the scatter/assemble sequence is still mid-flight when the user
+    // scrolls away (very possible — it takes several seconds), don't let
+    // the fixed, full-viewport tile layer keep floating over whatever
+    // section they've scrolled to. Skip straight to the finished state:
+    // bake the real photo onto the frame and hide the tiles immediately.
+    if (tileLayer.style.visibility !== 'hidden') {
+      photoFrame.style.backgroundImage = `url("${portraitURL}")`;
+      photoFrame.style.backgroundSize = 'cover';
+      photoFrame.style.backgroundPosition = 'center';
+      tileLayer.style.transition = 'none';
+      tileLayer.style.opacity = '0';
+      tileLayer.style.visibility = 'hidden';
+    }
+  }
+}, { passive: true });
+
 let resizeTimer;
+let lastWidth = window.innerWidth;
 window.addEventListener('resize', () => {
+  // Mobile browsers fire 'resize' when the address bar collapses/expands
+  // during ordinary scrolling — that only changes innerHeight, never width.
+  // Without filtering that out, an innocent scroll on mobile would replay
+  // the entire scatter-and-reassemble animation while the user is already
+  // reading a completely different section further down the page (since
+  // the tile layer is position:fixed and covers the full viewport).
+  const newWidth = window.innerWidth;
+  const widthChanged = Math.abs(newWidth - lastWidth) > 10;
+  if (!widthChanged) return;
+  lastWidth = newWidth;
+
+  if (hasScrolledPastHero) return;
+
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => startAssemblySequence(400), 200);
 });
@@ -389,6 +433,23 @@ if (projIntroWrapper && projTilesContainer) {
     });
   }, { threshold: 0.4 });
   projIntroObserver.observe(projIntroWrapper);
+
+  // Same category of bug as the hero: if the user scrolls past this block
+  // while it's still sitting in its assembled/hold state (hasn't started
+  // its own collapse yet), don't let it keep reserving space and showing
+  // puzzle pieces above the real project cards that have scrolled into
+  // view below it. Force it to skip straight to collapsed.
+  let projIntroForceDone = false;
+  window.addEventListener('scroll', () => {
+    if (projIntroForceDone) return;
+    if (projIntroWrapper.getBoundingClientRect().bottom < 80) {
+      projIntroForceDone = true;
+      projIntroWrapper.style.transition = 'none';
+      projIntroWrapper.style.opacity = '0';
+      projIntroWrapper.style.height = '0px';
+      projIntroWrapper.style.marginBottom = '0px';
+    }
+  }, { passive: true });
 }
 
 /* ============================================================
