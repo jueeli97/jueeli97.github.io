@@ -42,15 +42,29 @@ img { max-width: 100%; display: block; }
   font-family: 'Fraunces', serif; font-weight: 600; font-size: 18px;
   color: var(--ink); text-decoration: none;
 }
-.nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links a {
-  text-decoration: none; color: var(--muted); font-size: 14px; font-weight: 600;
-  transition: color 0.2s ease;
+.nav-links { display: flex; align-items: center; gap: 24px; }
+.nav-links a:not(.nav-cta) {
+  position: relative;
+  text-decoration: none; color: var(--ink); font-size: 13.5px; font-weight: 700;
+  padding: 8px 16px; border-radius: 9px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.nav-links a:hover { color: var(--ink); }
+.nav-links a:not(.nav-cta)::after {
+  content: ''; position: absolute; width: 11px; height: 16px; border-radius: 5px;
+  background: inherit; top: 50%; right: -6px; transform: translateY(-50%);
+}
+.nav-links a:not(.nav-cta)::before {
+  content: ''; position: absolute; width: 9px; height: 13px; border-radius: 4px;
+  background: var(--bg); top: 50%; left: -5px; transform: translateY(-50%); z-index: 2;
+}
+.nav-links a:not(.nav-cta):hover { transform: translateY(-2px); box-shadow: 0 6px 14px var(--shadow); }
+.nav-links a:nth-child(1) { background: var(--lavender); }
+.nav-links a:nth-child(2) { background: var(--peach); }
+.nav-links a:nth-child(3) { background: var(--sage); }
+.nav-links a:nth-child(4) { background: var(--rose); }
 .nav-cta {
   background: var(--ink); color: var(--bg) !important;
-  padding: 9px 18px; border-radius: 100px;
+  padding: 9px 18px; border-radius: 100px; text-decoration: none;
 }
 
 /* Mobile hamburger toggle */
@@ -77,10 +91,11 @@ img { max-width: 100%; display: block; }
     max-height: 0; overflow: hidden;
     transition: max-height 0.35s ease;
   }
-  .nav-links.open { max-height: 360px; }
-  .nav-links a {
-    padding: 16px 32px; border-top: 1px solid rgba(50,43,58,0.06);
-    font-size: 15px;
+  .nav-links.open { max-height: 400px; }
+  .nav-links a { padding: 14px 32px; font-size: 15px; }
+  .nav-links a:not(.nav-cta) {
+    display: block; margin: 8px 20px; border-radius: 12px;
+    padding: 12px 16px; text-align: center;
   }
   .nav-links a.nav-cta {
     margin: 14px 32px 18px; border-top: none; text-align: center;
