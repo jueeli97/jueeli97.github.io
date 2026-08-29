@@ -91,7 +91,7 @@ for (let i = 0; i < particleCount; i++) {
 /* ============================================================
    HERO — photo assembly (puzzle tiles fly in & become the portrait)
    ============================================================ */
-const portraitURL = 'assets/profile.png';
+const portraitURL = 'assets/profile.jpg';
 
 const COLS = 6, ROWS = 7;
 const photoFrame = document.getElementById('photoFrame');
